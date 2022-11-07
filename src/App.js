@@ -4,7 +4,8 @@ import { Navigation } from './Components/Navigation';
 
 import { Routes, Route } from 'react-router-dom'
 import { CharacterList } from './Components/CharacterList';
-import {Films} from './Components/Films'
+import { Films } from './Components/Films'
+import { Planets } from './Components/Planets'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
                     <Route path='/starships' element={<Starships />} />
                     <Route path='/characters' element={<CharacterList />} />
                     <Route path='/films' element={<Films />} />
+                    <Route path='/planets' element={<Planets />} />
 
                 </Routes>
 

@@ -8,6 +8,7 @@ export const Navigation = () => {
                 <li><Link to="starships">Starships</Link></li>
                 <li><Link to="/characters">Characters</Link></li>
                 <li><Link to="/films">Films</Link></li>
+                <li><Link to="/planets">Planets</Link></li>
             </ul>
         </nav>
     )
