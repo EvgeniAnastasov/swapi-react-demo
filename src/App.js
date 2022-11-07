@@ -1,25 +1,28 @@
 import './App.css';
-import { useEffect, useState } from 'react';
-import { CharacterList } from './Components/CharacterList';
+import { Starships } from './Components/Starships';
+import { Navigation } from './Components/Navigation';
 
+import { Routes, Route } from 'react-router-dom'
+import { CharacterList } from './Components/CharacterList';
+import {Films} from './Components/Films'
 
 function App() {
-    const [characters, setCharacters] = useState([])
 
-
-    useEffect(() => {
-        fetch('https://swapi.dev/api/people')
-            .then(res => res.json())
-            .then(result => {
-                setCharacters(result.results);
-            })
-    }, []);
 
     return (
         <div className="App">
             <header className="App-header">
 
-                <CharacterList characters={characters} />
+                <Routes>
+                    <Route path='/' element={<h1>Star Wars</h1>} />
+                    <Route path='/starships' element={<Starships />} />
+                    <Route path='/characters' element={<CharacterList />} />
+                    <Route path='/films' element={<Films />} />
+
+                </Routes>
+
+                <Navigation />
+
 
             </header>
         </div>
