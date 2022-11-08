@@ -1,14 +1,23 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
+import styles from './Navigation.module.css'
 
-export const Navigation = () => {
+export function Navigation() {
+
+    const setStyle = ({ isActive }) => {
+
+        return isActive
+            ? styles['active']
+            : undefined;
+    }
+
     return (
         <nav>
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="starships">Starships</Link></li>
-                <li><Link to="/characters">Characters</Link></li>
-                <li><Link to="/films">Films</Link></li>
-                <li><Link to="/planets">Planets</Link></li>
+                <li><NavLink className={setStyle} to="/" >Home</NavLink></li>
+                <li><NavLink className={setStyle} to="starships" >Starships</NavLink></li>
+                <li><NavLink className={setStyle} to="/characters" >Characters</NavLink></li>
+                <li><NavLink className={setStyle} to="/films" >Films</NavLink></li>
+                <li><NavLink className={setStyle} to="/planets" >Planets</NavLink></li>
             </ul>
         </nav>
     )

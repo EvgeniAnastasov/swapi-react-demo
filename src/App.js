@@ -14,6 +14,8 @@ function App() {
         <div className="App">
             <header className="App-header">
 
+            <Navigation />
+
                 <Routes>
                     <Route path='/' element={<h1>Star Wars</h1>} />
                     <Route path='/starships' element={<Starships />} />
@@ -23,7 +25,7 @@ function App() {
 
                 </Routes>
 
-                <Navigation />
+                
 
 
             </header>
