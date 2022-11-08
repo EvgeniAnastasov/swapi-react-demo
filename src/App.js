@@ -14,18 +14,22 @@ function App() {
         <div className="App">
             <header className="App-header">
 
-            <Navigation />
+                <div className='nav'>
+                    <Navigation className="nav" />
+                </div>
 
-                <Routes>
-                    <Route path='/' element={<h1>Star Wars</h1>} />
-                    <Route path='/starships' element={<Starships />} />
-                    <Route path='/characters' element={<CharacterList />} />
-                    <Route path='/films' element={<Films />} />
-                    <Route path='/planets' element={<Planets />} />
+                <div className='main'>
+                    <Routes>
+                        <Route path='/' element={<h1>Star Wars</h1>} />
+                        <Route path='/starships' element={<Starships />} />
+                        <Route path='/characters' element={<CharacterList />} />
+                        <Route path='/films' element={<Films />} />
+                        <Route path='/planets' element={<Planets />} />
 
-                </Routes>
+                    </Routes>
+                </div>
 
-                
+
 
 
             </header>
