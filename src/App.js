@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom'
 import { CharacterList } from './Components/CharacterList';
 import { Films } from './Components/Films'
 import { Planets } from './Components/Planets'
+import {Species} from './Components/Species'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
                         <Route path='/characters' element={<CharacterList />} />
                         <Route path='/films' element={<Films />} />
                         <Route path='/planets' element={<Planets />} />
+                        <Route path='/species' element={<Species />}></Route>
 
                     </Routes>
                 </div>

@@ -18,6 +18,7 @@ export function Navigation() {
                 <li><NavLink className={setStyle} to="/characters" >Characters</NavLink></li>
                 <li><NavLink className={setStyle} to="/films" >Films</NavLink></li>
                 <li><NavLink className={setStyle} to="/planets" >Planets</NavLink></li>
+                <li><NavLink className={setStyle} to="/species" >Species</NavLink></li>
             </ul>
         </nav>
     )
